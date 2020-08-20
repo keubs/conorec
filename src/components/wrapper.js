@@ -5,7 +5,8 @@ import styled from 'styled-components';
 function WrapperComponent(props) {
   const Wrapper = styled.div`
     position: relative;
-    background-image: url(${props => props.image});
+    background-image: url(${props.image});
+    background-size: cover;
     width: 100%;
     height: 100vh;
 
@@ -17,7 +18,7 @@ function WrapperComponent(props) {
       top: 50%;
       transform: translateY(-50%);
       margin: auto;
-      background-color: ${props => props.color};
+      color: ${props.color};
       z-index: 1;
     }
 
@@ -35,11 +36,9 @@ function WrapperComponent(props) {
   `;
 
   const { image } = props;
-  console.log(props.color);
   return (
     <Wrapper>
       {props.children}
-      <BackgroundImage src={image} />
     </Wrapper>
   )
 }
