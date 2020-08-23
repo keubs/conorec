@@ -7,6 +7,7 @@ function WrapperComponent(props) {
     position: relative;
     background-image: url(${props.image});
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100vh;
 

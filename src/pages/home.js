@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+
 
 const Circle = styled.div`
   border-radius: 9999px;
@@ -49,14 +50,16 @@ const Name = styled.h1`
 
 function Home() {
   return(
-    <Wrapper>
-      <h1>About</h1>
-      <Name>Conor Rechtschaffner - Senior Art Director</Name>
-      <h1>Work</h1>
-      <Red />
-      <Blue />
-      <Orange />
-    </Wrapper>
+    <ParallaxProvider>
+      <Wrapper>
+          <h1>About</h1>
+            <Name>Conor Rechtschaffner - Senior Art Director</Name>
+          <h1>Work</h1>
+          <Red />
+          <Blue />
+          <Orange />
+      </Wrapper>
+    </ParallaxProvider>
   );
 }
 

@@ -7,10 +7,14 @@ import {
 } from 'react-router-dom';
 
 import './App.css';
+
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+
 import Home from './pages/home';
 
 import Wrapper from './components/wrapper';
 
+// Images
 import pride from './images/pride.jpg';
 import hackweek from './images/hack-week.jpg';
 import tweets from './images/tweets.jpg';
@@ -22,6 +26,7 @@ import aw from './images/aw.jpg';
 import up from './images/up.jpg';
 import mini from './images/mini.jpg';
 import bcaa from './images/bcaa.jpg';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 function App() {
   return (
@@ -34,38 +39,60 @@ function App() {
           <Route path="/">
               <Home />
               <Link to="/pride">
-                <Wrapper image={pride} color="black">
-                  <h1>Pride</h1>
-                </Wrapper>
+                <LazyLoadComponent>
+                  <Wrapper image={pride} color="black">
+                    <h1>Pride</h1>
+                  </Wrapper>
+                </LazyLoadComponent>
               </Link>
-              <Wrapper image={hackweek} color="white">
-                <h1>Hack Week</h1>
-              </Wrapper>
-              <Wrapper image={tweets} />
-              <Wrapper image={blackbirds}>
-                <h1>Blackbirds</h1>
-              </Wrapper>
-              <Wrapper image={twitterTogether}>
-                <h1>Twitter Together</h1>
-              </Wrapper>
-              <Wrapper image={oneteam}>
-                <h1>OneTeam</h1>
-              </Wrapper>
-              <Wrapper image={mini}>
-                <h1>Mini</h1>
-              </Wrapper>
-              <Wrapper image={fantasticBeasts}>
-                <h1>Fantastic Beasts</h1>
-              </Wrapper>
-              <Wrapper image={bcaa}>
-                <h1>BCAA</h1>
-              </Wrapper>
-              <Wrapper image={aw}>
-                <h1>A&amp;W</h1>
-              </Wrapper>
-              <Wrapper image={up}>
-                <h1>UP</h1>
-              </Wrapper>
+              <LazyLoadComponent>
+                <Wrapper image={hackweek} color="white">
+                  <h1>Hack Week</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={tweets} />
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={blackbirds}>
+                  <h1>Blackbirds</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={twitterTogether}>
+                  <h1>Twitter Together</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={oneteam}>
+                  <h1>OneTeam</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={mini}>
+                  <h1>Mini</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={fantasticBeasts}>
+                  <h1>Fantastic Beasts</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={bcaa}>
+                  <h1>BCAA</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={aw}>
+                  <h1>A&amp;W</h1>
+                </Wrapper>
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Wrapper image={up}>
+                  <h1>UP</h1>
+                </Wrapper>
+              </LazyLoadComponent>
           </Route>
         </Switch>
       </Router>
